@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>চীনের প্রাচীন লোককথা</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#d32f2f">
+    <link rel="apple-touch-icon" href="https://cdn-icons-png.flaticon.com/512/3964/3964063.png">
+</head>
+<body>
+
+    <header>
+        <h1>চীনের প্রাচীন লোককথা</h1>
+        <p>রূপকথার জাদুকরী জগতে পা রাখুন</p>
+    </header>
+
+    <main id="story-container">
+        </main>
+
+    <div id="story-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <img id="modal-img" src="" alt="Story Image">
+            <h2 id="modal-title"></h2>
+            <div id="modal-text"></div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© ২০২৬ চীনের প্রাচীন লোককথা | PWA App</p>
+    </footer>
+
+    <script src="app.js"></script>
+    <script>
+        // Service Worker Registration
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js')
+                .then(() => console.log('Service Worker Registered'))
+                .catch(err => console.log('SW Failed:', err));
+        }
+    </script>
+</body>
+</html>
