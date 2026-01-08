@@ -1,0 +1,93 @@
+body {
+    font-family: 'SolaimanLipi', sans-serif; /* বাংলা ফন্ট */
+    margin: 0;
+    padding: 0;
+    background-color: #fff5e6;
+    color: #333;
+}
+
+header {
+    background: #d32f2f; /* চাইনিজ লাল */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+header h1 { margin: 0; font-size: 1.8rem; }
+header p { margin: 5px 0 0; font-size: 1rem; opacity: 0.9; }
+
+#story-container {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* Story Card Design */
+.card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    border: 1px solid #eee;
+}
+
+.card:hover { transform: translateY(-5px); }
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content { padding: 15px; }
+.card-title { font-size: 1.2rem; font-weight: bold; color: #b71c1c; margin-bottom: 8px; }
+.card-desc { font-size: 0.9rem; color: #666; }
+
+/* Modal Design */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
+    left: 0; top: 0; 
+    width: 100%; height: 100%; 
+    background-color: rgba(0,0,0,0.8);
+    overflow-y: auto;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.close-btn {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #aaa;
+    cursor: pointer;
+}
+.close-btn:hover { color: red; }
+
+#modal-img { width: 100%; border-radius: 8px; margin-bottom: 15px; max-height: 300px; object-fit: cover;}
+#modal-title { color: #d32f2f; margin-top: 0; }
+#modal-text { line-height: 1.6; white-space: pre-wrap; text-align: justify;}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #333;
+    color: white;
+    margin-top: 20px;
+}
